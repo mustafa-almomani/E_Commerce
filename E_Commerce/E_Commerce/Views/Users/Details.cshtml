@@ -1,0 +1,219 @@
+﻿@*@model E_Commerce.Models.User
+
+    @{
+        ViewBag.Title = "User Details";
+        Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    }
+
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 280px;
+            border-radius: 33px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 2rem !important;
+        }
+
+        .top-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            border-radius: 10px;
+            border: 2px solid #5957f9;
+        }
+
+        .name {
+            font-size: 15px;
+            font-weight: bold;
+            color: #272727;
+            position: relative;
+            top: 8px;
+        }
+
+        .mail {
+            font-size: 14px;
+            color: grey;
+            position: relative;
+            top: 2px;
+        }
+
+        .btn-custom {
+            background-color: #5957f9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-custom-secondary {
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #4946d1;
+        }
+
+        .btn-custom-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .action-buttons {
+            margin-top: 15px;
+        }
+    </style>
+
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="card">
+            <div class="top-container">
+                <img src="https://i.imgur.com/G1pXs7D.jpg" class="img-fluid profile-image" width="70">
+                <div class="ml-3">
+                    <h3>Welcome @Model.name</h3>
+                    <h5 class="name">@Html.DisplayNameFor(model => model.name): @Html.DisplayFor(model => model.name)</h5>
+                    <p class="mail">@Html.DisplayNameFor(model => model.email): @Html.DisplayFor(model => model.email)</p>
+                    <div class="action-buttons">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-custom" }) |
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-custom-secondary" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+@model E_Commerce.Models.User
+
+@{
+    ViewBag.Title = "User Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<style>
+    body {
+        background-color: #eee;
+    }
+
+    .card {
+        background-color: #fff;
+        width: 400px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 2rem !important;
+    }
+
+    .top-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #5957f9;
+        margin-bottom: 15px;
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #272727;
+        margin-bottom: 5px;
+    }
+
+    .mail {
+        font-size: 14px;
+        color: grey;
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        margin-bottom: 10px;
+    }
+
+    .input-section {
+        margin-bottom: 20px;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-custom {
+        background-color: #5957f9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: 48%;
+        text-align: center;
+    }
+
+    .btn-custom-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        width: 48%;
+        text-align: center;
+    }
+
+    .btn-custom:hover {
+        background-color: #4946d1;
+    }
+
+    .btn-custom-secondary:hover {
+        background-color: #5a6268;
+    }
+</style>
+
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card">
+        <div class="top-container">
+            <img src="https://i.imgur.com/G1pXs7D.jpg" class="img-fluid profile-image" />
+            <h3>Welcome @Model.name</h3>
+        </div>
+
+        <div class="input-section">
+            <h5 class="name">@Html.DisplayNameFor(model => model.name):</h5>
+            <p class="mail">@Html.DisplayFor(model => model.name)</p>
+
+            <h5 class="name">@Html.DisplayNameFor(model => model.email):</h5>
+            <p class="mail">@Html.DisplayFor(model => model.email)</p>
+        </div>
+
+        <div class="action-buttons">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-custom" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-custom-secondary" })
+        </div>
+    </div>
+</div>

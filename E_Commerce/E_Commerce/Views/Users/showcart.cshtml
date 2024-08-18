@@ -1,0 +1,107 @@
+﻿@model IEnumerable<E_Commerce.Models.Cart>
+
+@{
+    ViewBag.Title = "showcart";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    decimal total = 0;
+}
+
+<main>
+ 
+    <!--================Cart Area =================-->
+    <section class="cart_area section_padding">
+        <div class="container">
+            <div class="cart_inner">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <div class="d-flex">
+                                                <img src="@Url.Content(item.Product.image_url)" alt="" />
+                                            </div>
+                                            <div class="media-body">
+
+                                                <p>@item.Product.Product_name</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$@item.Product.price</h5>
+                                    </td>
+                                    <td>
+                                        <div class="product_count">
+                                            <a href="@Url.Action("Subquantity", "Users", new { id = item.product_id })" class="input-number-decrement text-dark"> <i class="fa fa-minus"></i></a>
+                                            <input class="input-number" type="text" value="@item.quantity">
+                                            <a href="@Url.Action("Addquantity", "Users", new { id = item.product_id })" class="input-number-increment text-dark"> <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </td>
+                                    @{
+                                        var result = item.Product.price * item.quantity;
+                                        total += result;
+
+                                    }
+                                    <td>
+                                        <h5>$@result</h5>
+                                    </td>
+                                    <td class="align-middle">
+                                        <a class="btn btn-sm btn-danger d-flex justify-content-center align-items-center"
+                                           style="height: 30px; width: 30px; padding: 0; border-radius: 50%;"
+                                           href="@Url.Action("DeletItem", "Users", new { id = item.product_id })">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            }
+
+                        <tr>
+
+                            <td>
+                                <h5>Subtotal</h5>
+                            </td>
+                            <td>
+                                <h5>$@total</h5>
+                            </td>
+                            <td>
+                                <h5>Discount</h5>
+                            </td>
+                            <td>
+                                <h5>$30</h5>
+                            </td>
+                            <td>
+                                <h5>Total</h5>
+                            </td>
+                            <td>
+                                <h5>$@(total-30)</h5>
+                            </td>
+                            </tr>
+
+</tbody>
+                      
+                    </table>
+                    <div class="checkout_btn_inner float-right">
+                        <a class="btn_1" href="@Url.Action("shop","Users")">Continue Shopping</a>
+                        <a class="btn_1 checkout_btn_1" href="#">Proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--================End Cart Area =================-->
+</main>>
+
+
+
+

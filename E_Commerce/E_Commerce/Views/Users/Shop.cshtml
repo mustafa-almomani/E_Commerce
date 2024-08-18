@@ -1,0 +1,115 @@
+﻿@model IEnumerable<E_Commerce.Models.Product>
+
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<main>
+    <!-- Hero Area Start-->
+    <div class="slider-area ">
+        <div class="single-slider slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>Watch Shop</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Area End-->
+    <!-- Latest Products Start -->
+    <section class="popular-items latest-padding">
+        <div class="container">
+            <div class="row product-btn justify-content-between mb-40">
+                <!-- Filter Buttons -->
+                <div class="select-this">
+                    @using (Html.BeginForm("Shop", "Users", FormMethod.Get))
+                    {
+                        <div>
+                            <button type="submit" name="categoryId" value="2" class="window-button">Men's Watches</button>
+                            <button type="submit" name="categoryId" value="3" class="window-button">Women's Watches</button>
+                            <button type="submit" name="categoryId" value="4" class="window-button">Wall Clocks</button>
+                            <button type="submit" name="categoryId" value="" class="window-button-secondary">Show All</button>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Products Display -->
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="@Url.Content(item.image_url)" height="400px" alt="">
+                                        <div class="img-cap">
+                                            <span>@Html.ActionLink("Add To Cart", "cart", new { id = item.id })</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3>@item.Product_name</h3>
+                                        <p>@item.disc</p>
+                                        <span>@item.price</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Products End -->
+</main>
+
+<style>
+    .window-button {
+        background-color: #007bff;
+        border: 2px solid #0056b3;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 5px 2px;
+        cursor: pointer;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+        .window-button:hover {
+            background-color: #0056b3;
+            border-color: #004080;
+        }
+
+    .window-button-secondary {
+        background-color: #6c757d;
+        border: 2px solid #565e64;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 5px 2px;
+        cursor: pointer;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+        .window-button-secondary:hover {
+            background-color: #565e64;
+            border-color: #40484f;
+        }
+</style>

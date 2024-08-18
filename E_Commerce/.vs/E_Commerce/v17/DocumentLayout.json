@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\almom\\source\\repos\\E_Commerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10406551-9F80-4A01-B834-49D92B3C508A}|E_Commerce\\E_Commerce.csproj|c:\\users\\almom\\source\\repos\\e_commerce\\e_commerce\\views\\users\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10406551-9F80-4A01-B834-49D92B3C508A}|E_Commerce\\E_Commerce.csproj|solutionrelative:e_commerce\\views\\users\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10406551-9F80-4A01-B834-49D92B3C508A}|E_Commerce\\E_Commerce.csproj|c:\\users\\almom\\source\\repos\\e_commerce\\e_commerce\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10406551-9F80-4A01-B834-49D92B3C508A}|E_Commerce\\E_Commerce.csproj|solutionrelative:e_commerce\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10406551-9F80-4A01-B834-49D92B3C508A}|E_Commerce\\E_Commerce.csproj|c:\\users\\almom\\source\\repos\\e_commerce\\e_commerce\\views\\users\\showcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10406551-9F80-4A01-B834-49D92B3C508A}|E_Commerce\\E_Commerce.csproj|solutionrelative:e_commerce\\views\\users\\showcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 242,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 74,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\almom\\source\\repos\\E_Commerce\\E_Commerce\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "E_Commerce\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\almom\\source\\repos\\E_Commerce\\E_Commerce\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "E_Commerce\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAANsAAAAAAAAAAAAiwPIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T18:38:53.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Shop.cshtml",
+              "DocumentMoniker": "C:\\Users\\almom\\source\\repos\\E_Commerce\\E_Commerce\\Views\\Users\\Shop.cshtml",
+              "RelativeDocumentMoniker": "E_Commerce\\Views\\Users\\Shop.cshtml",
+              "ToolTip": "C:\\Users\\almom\\source\\repos\\E_Commerce\\E_Commerce\\Views\\Users\\Shop.cshtml",
+              "RelativeToolTip": "E_Commerce\\Views\\Users\\Shop.cshtml",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAkwF4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T14:29:50.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "showcart.cshtml",
+              "DocumentMoniker": "C:\\Users\\almom\\source\\repos\\E_Commerce\\E_Commerce\\Views\\Users\\showcart.cshtml",
+              "RelativeDocumentMoniker": "E_Commerce\\Views\\Users\\showcart.cshtml",
+              "ToolTip": "C:\\Users\\almom\\source\\repos\\E_Commerce\\E_Commerce\\Views\\Users\\showcart.cshtml",
+              "RelativeToolTip": "E_Commerce\\Views\\Users\\showcart.cshtml",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAiwFkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T14:17:41.973Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
